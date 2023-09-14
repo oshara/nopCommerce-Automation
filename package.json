@@ -1,0 +1,21 @@
+{
+  "name": "nopcommerce-automation",
+  "version": "1.0.0",
+  "description": "Test scenarnios has been automated for nopCommerce web application ussing playwright web automation framework.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshara/nopCommerce-Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oshara/nopCommerce-Automation/issues"
+  },
+  "homepage": "https://github.com/oshara/nopCommerce-Automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.38.0"
+  }
+}
