@@ -1,3 +1,4 @@
+import { expect } from "@playwright/test";
 exports.RegisterPage =class RegisterPage {
  
     constructor(page){
@@ -5,9 +6,9 @@ exports.RegisterPage =class RegisterPage {
         this.gender = page.locator('input[id="gender-female"]');
         this.firstName = page.locator('#FirstName');
         this.lastName = page.locator('#LastName');
-        this.dobDate= page.locator('#DateOfBirthDay');
-        this.dobMonth = page.locator('#DateOfBirthMonth');
-        this.dobYear = page.locator('#DateOfBirthYear');
+        this.dobDate= page.locator('//select[@name="DateOfBirthDay"]');
+        this.dobMonth = page.locator('//select[@name="DateOfBirthMonth"]');
+        this.dobYear = page.locator('//select[@name="DateOfBirthYear"]');
         this.email = page.locator('#Email');
         this.companyName = page.locator("#Company");
         this.newsLetter = page.locator('#Newsletter');
@@ -15,7 +16,8 @@ exports.RegisterPage =class RegisterPage {
         this.confirmPassword = page.locator('#ConfirmPassword');
 
         this.registerBtn = page.locator('#register-button');
-
+        //this.successMessageForRegister = page.locator('//div[@xpath="1"]');
+        //this.successMessageForRegister = page.getByText('Your registration completed');
 
     }
 
@@ -33,7 +35,7 @@ exports.RegisterPage =class RegisterPage {
     }
 
     async fillDOB(){
-        await this.dobDate.selectOption('10');
+        await this.dobDate.selectOption('11');
         await this.dobMonth.selectOption('May');
         await this.dobYear.selectOption('1990');
     }
@@ -58,5 +60,10 @@ exports.RegisterPage =class RegisterPage {
 
     async clickRegisterBtn(){
         await this.registerBtn.click();
+    }
+
+    async successMessage(){
+     console.log(this.successMessageForRegister)
+     expect(this.page.successMessageForRegister).toContain('Your registration completed');
     }
 }

@@ -22,6 +22,7 @@ test('Verify user can create a account',async({page})=>{
     await RegisterObj.checkNewsLetter();
     await RegisterObj.fillPasswords(password,confirmpassword);
     await RegisterObj.clickRegisterBtn();
+    //await RegisterObj.successMessage();
 
    
 })
