@@ -16,6 +16,9 @@ exports.RegisterPage =class RegisterPage {
         this.confirmPassword = page.locator('#ConfirmPassword');
 
         this.registerBtn = page.locator('#register-button');
+
+        this.firstNameEmptyError = page.locator('#FirstName-error');
+        this.lastNameEmptyError = page.locator('#LastName-error');
         //this.successMessageForRegister = page.locator('//div[@xpath="1"]');
         //this.successMessageForRegister = page.getByText('Your registration completed');
 
@@ -65,5 +68,14 @@ exports.RegisterPage =class RegisterPage {
     async successMessage(){
      console.log(this.successMessageForRegister)
      expect(this.page.successMessageForRegister).toContain('Your registration completed');
+    }
+
+    async validationFirstNameEmpty(){
+        expect(this.firstNameEmptyError).toContainText('First name is required.');
+
+    }
+
+    async validationLastNameEmpty (){
+        expect(this.lastNameEmptyError).toContainText('Last name is required');
     }
 }
