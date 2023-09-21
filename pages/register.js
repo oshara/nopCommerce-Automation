@@ -19,6 +19,7 @@ exports.RegisterPage =class RegisterPage {
 
         this.firstNameEmptyError = page.locator('#FirstName-error');
         this.lastNameEmptyError = page.locator('#LastName-error');
+        this.emailEmptyError= page.locator('#Email-error');
         //this.successMessageForRegister = page.locator('//div[@xpath="1"]');
         //this.successMessageForRegister = page.getByText('Your registration completed');
 
@@ -71,11 +72,20 @@ exports.RegisterPage =class RegisterPage {
     }
 
     async validationFirstNameEmpty(){
-        expect(this.firstNameEmptyError).toContainText('First name is required.');
+        expect(this.firstNameEmptyError).toHaveText('First name is required.');
 
     }
 
     async validationLastNameEmpty (){
-        expect(this.lastNameEmptyError).toContainText('Last name is required');
+        expect(this.lastNameEmptyError).toHaveText('Last name is required');
     }
+
+    async validationEmailEmpty(){
+        expect(this.emailEmptyError).toHaveText('Email is required.');
+    }
+
+    async validationWrongEmail(){
+        expect(this.emailEmptyError).toHaveText('Wrong email');
+    }
+
 }

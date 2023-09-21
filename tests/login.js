@@ -13,6 +13,8 @@ test('Verify user can successfully login to the account',async({page})=>{
     await HomeObj.gotoHomePage();
     await HomeObj.gotoLoginPage();
     await LoginObj.loginWithValidCredentials(email,password);
+
+    await LoginObj.loginBtn()
 })
 
 }
