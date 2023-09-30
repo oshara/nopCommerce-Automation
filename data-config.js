@@ -8,3 +8,6 @@ export const confirmpassword = 'Jenny@1234';
 export const invalidEmail = 'Jennygmail.com';
 export const notmachingconfirmpassword = "Jenny";
 export const shortPassword = "Jen";
+
+export const notRegiEmail = "kate@gmail.com";
+
