@@ -20,6 +20,9 @@ exports.RegisterPage =class RegisterPage {
         this.firstNameEmptyError = page.locator('#FirstName-error');
         this.lastNameEmptyError = page.locator('#LastName-error');
         this.emailEmptyError= page.locator('#Email-error');
+        this.passwordEmptyError = page.locator('#Password-error');
+        this.confirmPasswordEmptyError = page.locator('#ConfirmPassword-error');
+       
         //this.successMessageForRegister = page.locator('//div[@xpath="1"]');
         //this.successMessageForRegister = page.getByText('Your registration completed');
 
@@ -88,4 +91,12 @@ exports.RegisterPage =class RegisterPage {
         expect(this.emailEmptyError).toHaveText('Wrong email');
     }
 
+    async validatingPasswordEmtpy(){
+        expect(this.passwordEmptyError).toHaveText('Password is required.');
+        expect(this.confirmPassword).toHaveText('Password is required.');
+    }
+
+    async passwordNotMatchError(){
+        expect (this.confirmPasswordEmptyError).toHaveText('The password and confirmation password do not match.');
+    }
 }

@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { HomePage } from '../pages/home';
 import { RegisterPage } from '../pages/register'
-import { companyname, confirmpassword, email, firstname, invalidEmail, lastname, password } from '../data-config';
+import { companyname, confirmpassword, email, firstname, invalidEmail, lastname, notmachingconfirmpassword, password } from '../data-config';
 
 export const registerValidations= ()=>{
 
@@ -69,7 +69,7 @@ test('Validation message check when email field is empty',async({page})=>{
 
 })
 
-test.only('Validation message when user enters a invalid email',async({page})=>{
+test('Validation message when user enters a invalid email',async({page})=>{
     const HomeObj = new HomePage(page);
     const RegisterObj = new RegisterPage(page);
 
@@ -84,9 +84,56 @@ test.only('Validation message when user enters a invalid email',async({page})=>{
     await RegisterObj.fillCompanyName(companyname);
     await RegisterObj.checkNewsLetter();
     await RegisterObj.fillPasswords(password, confirmpassword);
-    await page.pause();
     await RegisterObj.clickRegisterBtn();
+    await RegisterObj.validationWrongEmail();
 
 })
 
+test("Verifying the password empty password fields error",async({page})=>{
+    const HomeObj = new HomePage(page);
+    const RegisterObj = new RegisterPage(page);
+
+    await HomeObj.gotoHomePage();
+    await HomeObj.gotoRegisterPage();
+
+    await RegisterObj.selectGender();
+    await RegisterObj.fillFirstName(firstname);
+    await RegisterObj.fillLastName(lastname);
+    await RegisterObj.fillEmail(email);
+    await RegisterObj.fillDOB();
+    await RegisterObj.fillCompanyName(companyname);
+    await RegisterObj.checkNewsLetter();
+   
+    await RegisterObj.clickRegisterBtn();
+    
+    await RegisterObj.validatingPasswordEmtpy();
+    
+})
+
+
+
+ test.only("Validating error message when Password and Confirm Password does not match erorr",async({page})=>{
+    const HomeObj = new HomePage(page);
+    const RegisterObj = new RegisterPage(page);
+
+    await HomeObj.gotoHomePage();
+    await HomeObj.gotoRegisterPage();
+
+    await RegisterObj.selectGender();
+    await RegisterObj.fillFirstName(firstname);
+    await RegisterObj.fillLastName(lastname);
+    await RegisterObj.fillEmail(email);
+    await RegisterObj.fillDOB();
+    await RegisterObj.fillCompanyName(companyname);
+    await RegisterObj.checkNewsLetter();
+    await RegisterObj.fillPasswords(password,notmachingconfirmpassword);
+   
+    await RegisterObj.clickRegisterBtn();
+
+    await page.pause();
+    await RegisterObj.passwordNotMatchError();
+    
+
+ })
 }
+
