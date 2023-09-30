@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { HomePage } from '../pages/home';
 import { RegisterPage } from '../pages/register'
-import { companyname, confirmpassword, email, firstname, invalidEmail, lastname, notmachingconfirmpassword, password } from '../data-config';
+import { companyname, confirmpassword, email, firstname, invalidEmail, lastname, notmachingconfirmpassword, password, shortPassword } from '../data-config';
 
 export const registerValidations= ()=>{
 
@@ -112,7 +112,7 @@ test("Verifying the password empty password fields error",async({page})=>{
 
 
 
- test.only("Validating error message when Password and Confirm Password does not match erorr",async({page})=>{
+ test("Validating error message when Password and Confirm Password does not match erorr",async({page})=>{
     const HomeObj = new HomePage(page);
     const RegisterObj = new RegisterPage(page);
 
@@ -132,6 +132,30 @@ test("Verifying the password empty password fields error",async({page})=>{
 
     await page.pause();
     await RegisterObj.passwordNotMatchError();
+    
+
+ })
+
+ test.only("Validating error message when user enter a short password",async({page})=>{
+    const HomeObj = new HomePage(page);
+    const RegisterObj = new RegisterPage(page);
+
+    await HomeObj.gotoHomePage();
+    await HomeObj.gotoRegisterPage();
+
+    await RegisterObj.selectGender();
+    await RegisterObj.fillFirstName(firstname);
+    await RegisterObj.fillLastName(lastname);
+    await RegisterObj.fillEmail(email);
+    await RegisterObj.fillDOB();
+    await RegisterObj.fillCompanyName(companyname);
+    await RegisterObj.checkNewsLetter();
+    await RegisterObj.fillPasswords(shortPassword,shortPassword);
+   
+    await RegisterObj.clickRegisterBtn();
+
+    await page.pause();
+    await RegisterObj.shortPasswordError();
     
 
  })

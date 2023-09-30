@@ -99,4 +99,8 @@ exports.RegisterPage =class RegisterPage {
     async passwordNotMatchError(){
         expect (this.confirmPasswordEmptyError).toHaveText('The password and confirmation password do not match.');
     }
+
+    async shortPasswordError(){
+        expect(this.passwordEmptyError).toContainText('Password must meet the following rules: ');
+    }
 }
