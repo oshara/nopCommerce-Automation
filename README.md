@@ -48,9 +48,9 @@ Test scenarnios has been automated for nopCommerce web application ussing playwr
 
 - Sub Menu Navigation
 1. Computers
-   (i). Verify the user can navigate to the Desktops page
-   (ii). Verify the user can navigate to the Notebooks page
-   (iii). Verify the user can navigate to the Software page
+   -  Verify the user can navigate to the Desktops page
+   -  Verify the user can navigate to the Notebooks page
+   -  Verify the user can navigate to the Software page
    
 2. Electronics
    (i). Verify the user can navigate to the Camera & Photo page
