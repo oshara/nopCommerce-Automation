@@ -53,14 +53,14 @@ Test scenarnios has been automated for nopCommerce web application ussing playwr
    -  Verify the user can navigate to the Software page
    
 2. Electronics
-   (i). Verify the user can navigate to the Camera & Photo page
-   (ii). Verify the user can navigate to the Cell phones page
-   (iii), Verify the user can navigate to the Others page
+   -  Verify the user can navigate to the Camera & Photo page
+   -  Verify the user can navigate to the Cell phones page
+   -  Verify the user can navigate to the Others page
    
 3. Apparel
-   (i). Verify the user can navigate to the Shoes page
-   (ii). Verify the user can navigate to the Clothing page
-   (iii). Verify the user can navigate to the Accessories page
+   -  Verify the user can navigate to the Shoes page
+   -  Verify the user can navigate to the Clothing page
+   -  Verify the user can navigate to the Accessories page
 
 - Popular Tags
 - Footer
