@@ -62,8 +62,57 @@ Test scenarnios has been automated for nopCommerce web application ussing playwr
    -  Verify the user can navigate to the Clothing page
    -  Verify the user can navigate to the Accessories page
 
-- Popular Tags
-- Footer
+
+# Popular Tags 
+
+- Verify user can click the "apparel" tag and navigate to the products that tags to apparels
+- Verify user can click the "awesome" tag and navigate to the products that tags to awesome
+- Verify user can click the "book" tag and navigate to the products that tags to book
+- Verify user can click the "camera" tag and navigate to the products that tags to the camera
+- Verify user can click the "cell" tag and navigate to the products that tags to cell
+- Verify user can click the "compact" tag and navigate to the products that tags to compact
+- Verify user can click the "computer" tag and navigate to the products that tags to computer
+- Verify user can click the "cool" tag and navigate to the products that tags to cool
+- Verify user can click the "digital" tag and navigate to the products that tags to digital
+- Verify user can click the "game" tag and navigate to the products that tags to game
+- Verify user can click the "jeans" tag and navigate to the products that tags to jeans
+- Verify user can click the "jewelry" tag and navigate to the products that tags to jewelry
+- Verify user can click the "nice" tag and navigate to the products that tags to nice
+- Verify user can click the "shirt" tag and navigate to the products that tags to shirt
+- Verify user can click the "shoes" tag and navigate to the products that tags to shoes
+- Verify user can click the view all link and navigate to the page to view the available tags
+
+# Footer
+- Verify user can navigates to the below mentioned pages when user clicks the links from the footer
+  - Information
+    1. Sitemap page
+    2. Shipping & returns page
+    3. Privacy notice page
+    4. Conditions of Use
+    5. About Us page
+    6. Contact Us page
+       
+  - Customer Service 
+    1. Search page
+    2. News page
+    3. Blog page
+    4. Recently viewed products page
+    5. Compare products list page
+    6. New products page
+       
+  - My Account
+    1. My account page
+    2. Orders page
+    3. Addresses page
+    4. Shopping cart page
+    5. Wishlist page
+    6. Apply for the vendor account page
+       
+  - Follow us
+   1. Facebook 
+   2. Twitter
+   3. You Tube
+      
 - Add Products/ Checkout Flow
 - Wishlist
 - Logout
