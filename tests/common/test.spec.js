@@ -5,6 +5,7 @@ import { registerValidations } from '../validationRegisterPage';
 import { validationsLogin } from '../validationLogin';
 import { mainMenuNavigation } from '../mainMenuNavigation';
 import { subMenuNavigations } from '../subMenuNavigation';
+import {  tagNavigations } from '../popularTagNavigations';
 
 
 //test.describe('Accounts',()=>createAccount());
@@ -12,4 +13,5 @@ import { subMenuNavigations } from '../subMenuNavigation';
 // test.describe('Validations in Register Page',()=>registerValidations());
 //test.describe('Validations in Login Page',()=>validationsLogin());
 // test.describe("Main Menus",()=>mainMenuNavigation());
-test.describe('Sub Menu Navigations',()=>subMenuNavigations());
+// test.describe('Sub Menu Navigations',()=>subMenuNavigations());
+test.describe("Popular Tags",()=>tagNavigations());
