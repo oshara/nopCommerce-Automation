@@ -12,21 +12,21 @@ test('Verify user can navigates to the Sitemap page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoSiteMapPage();
-    await page.pause()
+    
 })
 
 test('Verify user can navigates to the Shipping & returns page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoShippingReturnsPage()
-    await page.pause()
+   
 })
 
 test('Verify user can navigates to the Privacy notice page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoPrivacyNoticePage();
-    await page.pause()
+   
 })
 
 
@@ -34,28 +34,74 @@ test('Verify user can navigates to the Conditions of use page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoConditionsPage();
-    await page.pause()
+
 })
 
 test('Verify user can navigates to the About Us page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoAboutUsPage();
-    await page.pause()
+   
 })
 
 test('Verify user can navigates to the Contact Us page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoContactUsPage();
+   
+
+})
+
+test.only('Verify user can navigates to the Search page',async({page})=>{
+
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoSearchFooterMenu();
+    await page.pause()
+
+})
+
+test.only('Verify user can navigates to the News page',async({page})=>{
+
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoNewsFooterMenu();
+    await page.pause()
+
+})
+
+test.only('Verify user can navigates to the Blog page',async({page})=>{
+
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoBlogMenu();
+    await page.pause()
+
+})
+
+test.only('Verify user can navigates to the Recently Viewed Products page',async({page})=>{
+
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoRecentlyViewedProductFooterMenu();
     await page.pause()
 
 })
 
 
+test.only('Verify user can navigates to the Compare Products list page',async({page})=>{
+
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoCompareProductsFooterMenu();
+    await page.pause()
+
+})
 
 
+test.only('Verify user can navigates to the New Products page',async({page})=>{
 
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoNewProductsFooterMenu();
+    await page.pause()
 
+})
 
 }
+
+
