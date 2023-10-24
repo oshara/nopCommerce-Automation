@@ -24,7 +24,7 @@ exports.FooterSection = class FooterSection{
         this.newProduuctsMenu = page.locator('(//a[@href="/newproducts"])');
 
         // Footer -> My Account Section
-        this.myAccountFooterMenu = page.locator('//a[@href="/customer/info"]');
+        this.myAccountFooterMenu = page.locator('(//a[@href="/customer/info"])[2]');
         this.ordersMenu = page.locator('//a[@href="/order/history"]');
         this.addressesMenu= page.locator('//a[@href="/customer/addresses"]');
         this.cartFooterMenu = page.locator('(//a[@href="/cart"])[2]');
@@ -97,7 +97,31 @@ exports.FooterSection = class FooterSection{
 
     async gotoMyAccountFooterMenu(){
         await this.myAccountFooterMenu.click();
-        await expect(this.page).toHaveURL(url+"compareproducts");
+        await expect(this.page).toHaveURL(url+"customer/info");
     }
 
+    async gotoOrdersFooterMenu(){
+        await this.ordersMenu.click();
+        await expect(this.page).toHaveURL(url+"order/history");
+    }
+
+    async gotoAddressesFooterMenu(){
+        await this.addressesMenu.click();
+        await expect(this.page).toHaveURL(url+"customer/addresses");
+    }
+
+    async gotoShoppingCartFooterMenu(){
+        await this.cartFooterMenu.click();
+        await expect(this.page).toHaveURL(url+"cart");
+    }
+
+    async gotoWishlistFooterMenu(){
+        await this.wishlistFooterMenu.click();
+        await expect(this.page).toHaveURL(url+"wishlist");
+    }
+
+    async gotoApplyForVendorFooterMenu(){
+        await this.applyForVendorMenu.click();
+        await expect(this.page).toHaveURL(url+"vendor/apply");
+    }
 }
