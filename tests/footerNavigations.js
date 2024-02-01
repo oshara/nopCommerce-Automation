@@ -52,55 +52,85 @@ test('Verify user can navigates to the Contact Us page',async({page})=>{
 
 })
 
-test.only('Verify user can navigates to the Search page',async({page})=>{
+test('Verify user can navigates to the Search page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoSearchFooterMenu();
-    await page.pause()
+
 
 })
 
-test.only('Verify user can navigates to the News page',async({page})=>{
+test('Verify user can navigates to the News page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoNewsFooterMenu();
-    await page.pause()
+
 
 })
 
-test.only('Verify user can navigates to the Blog page',async({page})=>{
+test('Verify user can navigates to the Blog page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoBlogMenu();
-    await page.pause()
+
 
 })
 
-test.only('Verify user can navigates to the Recently Viewed Products page',async({page})=>{
+test('Verify user can navigates to the Recently Viewed Products page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoRecentlyViewedProductFooterMenu();
-    await page.pause()
+    
 
 })
 
 
-test.only('Verify user can navigates to the Compare Products list page',async({page})=>{
+test('Verify user can navigates to the Compare Products list page',async({page})=>{
 
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoCompareProductsFooterMenu();
-    await page.pause()
+    
 
 })
 
 
-test.only('Verify user can navigates to the New Products page',async({page})=>{
-
+test('Verify user can navigates to the New Products page',async({page})=>{
+    
     const FooterObj = new FooterSection(page);
     await FooterObj.gotoNewProductsFooterMenu();
-    await page.pause()
+    
 
 })
+
+
+test.only('Verify user can navigates to the nop-Commerce Facebook page',async({page})=>{
+    
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoFacebookPage();
+    await page.pause();
+    
+
+})
+
+test.only('Verify user can navigates to the nop-Commerce Twitter page',async({page})=>{
+    
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoTwitterPage();
+    await page.pause();
+
+})
+
+
+test.only('Verify user can navigates to the nop-Commerce YouTube page',async({page})=>{
+    
+    const FooterObj = new FooterSection(page);
+    await FooterObj.gotoYouTubePage();
+    await page.pause();
+
+})
+
+
+
 
 }
 
