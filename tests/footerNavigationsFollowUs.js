@@ -37,7 +37,7 @@ test("Navigating to Twitter page",async()=>{
 
 })
 
-test.only('Navigating to the YouTube page',async()=>{
+test('Navigating to the YouTube page',async()=>{
 
     const browser = await chromium.launch();
     const context = await browser.newContext();
