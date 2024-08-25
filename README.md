@@ -1,6 +1,6 @@
 # nopCommerce Automation
 
-Test scenarnios has been automated for nopCommerce web application ussing playwright web automation framework.
+Test scenarnios has been automated for nopCommerce web application using playwright web automation framework.
 
 ## Features
 - Register
